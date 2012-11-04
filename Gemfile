@@ -41,3 +41,5 @@ gem 'jquery-rails'
 group :test do
   gem 'rspec-rails'
 end
+
+gem 'simplecov'
