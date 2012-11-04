@@ -1,0 +1,23 @@
+%h1 List of Users
+%h3= link_to "Add User", new_user_path
+%table
+  %thead
+    %tr
+      %th Name
+      %th Father's Name
+      %th Mother's Name
+      %th Date of Birth
+      %th Date of Join
+      %th Address
+      %th
+  %tbody
+  - @users.each do |user|
+    %tr
+      %td= user.name
+      %td= user.father_name
+      %td= user.mother_name
+      %td= user.dob
+      %td= user.doj
+      %td= user.address
+      %td= link_to "Edit", edit_user_path(user)
+= paginate @users

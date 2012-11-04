@@ -1,0 +1,40 @@
+- if @user.errors.any?
+    #error_explanation
+        %h4 User is invalid
+        %ul
+            -for message in  @user.errors.full_messages
+                %li= message
+            -
+-
+%section
+    %h1 Add User
+    =form_for @user do |f|
+        %p
+            = f.label :name
+            %br
+            = f.text_field :name
+        %p
+            = f.label :father_name
+            %br
+            = f.text_field  :father_name
+        %p
+            = f.label :mother_name
+            %br
+            = f.text_field :mother_name
+        %p
+            = f.label :date_of_birth
+            %br
+            = f.date_select :date_of_birth, use_short_month: true, order: User::ORDER,
+              start_year: User::START_BIRTH_YEAR, end_year: User::END_YEAR
+        %p
+            = f.label :date_of_join
+            %br
+            = f.date_select :date_of_join, use_short_month: true, order: User::ORDER,
+              start_year: User::START_JOIN_YEAR, end_year: User::END_YEAR
+        %p
+            = f.label :address
+            %br
+            = f.text_area :address
+        %p.button
+            = f.submit
+    -
