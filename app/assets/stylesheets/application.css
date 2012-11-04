@@ -11,3 +11,9 @@
  *= require_self
  *= require_tree .
  */
+
+ #page {
+   margin-left: 180px;
+   padding-top: 35px;
+   width: 1000px;
+ }

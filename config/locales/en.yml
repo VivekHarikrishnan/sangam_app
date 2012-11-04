@@ -3,3 +3,10 @@
 
 en:
   hello: "Hello world"
+  views:
+    pagination:
+      previous: "/assets/kaminari/prev.png"
+      next: "/assets/kaminari/next.png"
+      first: "/assets/kaminari/first.png"
+      last: "/assets/kaminari/last.png"
+      truncate: "..."

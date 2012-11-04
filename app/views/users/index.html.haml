@@ -11,13 +11,13 @@
       %th Address
       %th
   %tbody
-  - @users.each do |user|
-    %tr
-      %td= user.name
-      %td= user.father_name
-      %td= user.mother_name
-      %td= user.dob
-      %td= user.doj
-      %td= user.address
-      %td= link_to "Edit", edit_user_path(user)
+    - @users.each_with_index do |user, index|
+      %tr
+        %td= user.name
+        %td= user.father_name
+        %td= user.mother_name
+        %td= user.dob
+        %td= user.doj
+        %td= user.address
+        %td= link_to "Edit", edit_user_path(user)
 = paginate @users
