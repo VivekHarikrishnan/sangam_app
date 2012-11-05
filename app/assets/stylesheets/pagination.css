@@ -4,10 +4,10 @@
 
 .page {
   background-image: url("/assets/kaminari/normal.png");
-  border: 2px solid #32A3C8;
+  border: 2px solid #ADAFB3;
   border-radius: 4px 4px 4px 4px;
   bottom: 15px;
-  color: #FFFFFF;
+  color: #003399;
   display: inline-block;
   height: 30px;
   position: relative;
@@ -27,18 +27,23 @@
 
 .current {
   background-image: url("/assets/kaminari/current.png");
+  border: 2px solid #4C5A78;
   bottom: 9px;
+  color: #FFFFFF;
   height: 24px;
   margin-top: -61px;
   padding-top: 6px;
-  position: relative;}
+  position: relative;
+  width: 30px;
+}
+
 
 .current:hover {
   background-image: url("/assets/kaminari/current.png");
 }
 
 .next, .prev, .last, .first {
-  border: 2px solid #32A3C8;
+  border: 2px solid #ADAFB3;
   border-radius: 4px;
   display: inline-block;
   width: 30px;
