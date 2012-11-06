@@ -10,12 +10,44 @@
  *
  *= require_self
  *= require_tree .
- */
+*/
 
- #page {
-   margin-left: 180px;
-   padding-top: 35px;
-   width: 1000px;
-   background-color: #F1F1F3;
-   height: 600px;
- }
+#page {
+  margin-left: 180px;
+  padding-top: 35px;
+  width: 1000px;
+  background-color: #F1F1F3;
+  height: 600px;
+  font-family: Helvetica;
+}
+
+input, textarea, select {
+  font-family: Helvetica;
+
+}
+
+input[type=text], textarea {
+  height: 20px;
+  padding: 5px;
+  width: 400px;
+  font-size: 13px;
+  border: 1px solid #7B818C;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+p {
+  line-height: 35px;
+  font-size: 13px;
+}
+
+textarea {
+  height: 90px;
+  resize: none;
+}
+
+input[type=text]:focus,textarea:focus {
+  border: 1px solid #293F6A;
+  background-color: #D2D8E3;
+  color: #333333;
+}

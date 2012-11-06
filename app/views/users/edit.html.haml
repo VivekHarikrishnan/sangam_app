@@ -7,7 +7,7 @@
             -
 -
 %section
-    %h1 Add User
+    %h1= "Edit Details: #{@user.name}"
     =form_for @user do |f|
         %p
             = f.label :name
