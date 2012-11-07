@@ -7,5 +7,8 @@ require File.expand_path('../config/application', __FILE__)
 SangamApp::Application.load_tasks
 
 task :cruise do
+  system('bundle install')
+  system('rake db:migrate');
+  system('rake db:test:prepare')
   system('rspec spec/*')
 end
