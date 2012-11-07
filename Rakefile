@@ -5,3 +5,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 SangamApp::Application.load_tasks
+
+task :cruise do
+  system('rspec spec/*')
+end
