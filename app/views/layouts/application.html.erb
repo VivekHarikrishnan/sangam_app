@@ -8,6 +8,14 @@
 </head>
 <body>
 <div id="page">
+<div id="user_nav">
+  <% if current_user %>
+    Logged in as <span class="logged_name">&lt;<%= current_user.name.capitalize %>&gt;</span>
+    <%= link_to "Log out", logout_path %>
+  <% else %>
+    <%= link_to "Log In", login_path %>
+  <% end %>
+</div>
 <%= yield %>
 </div>
 </body>

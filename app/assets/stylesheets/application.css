@@ -21,12 +21,38 @@
   font-family: Helvetica;
 }
 
+.login_error {
+  color: #CB0000;
+  font-weight: normal;
+  margin-left: 290px;
+}
+
+#user_nav {
+  float: right;
+  font-size: 13px;
+}
+
+#user_nav a{
+  color: #C00000;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+#user_nav a:hover {
+  color: #E23838;
+}
+
+.logged_name {
+  color: #003399;
+  font-weight: bold;
+}
+
 input, textarea, select {
   font-family: Helvetica;
 
 }
 
-input[type=text], textarea {
+input[type=text],input[type=password], textarea {
   height: 20px;
   padding: 5px;
   width: 400px;
@@ -46,7 +72,7 @@ textarea {
   resize: none;
 }
 
-input[type=text]:focus,textarea:focus {
+input[type=text]:focus,input[type=password]:focus, textarea:focus {
   border: 1px solid #293F6A;
   background-color: #D2D8E3;
   color: #333333;

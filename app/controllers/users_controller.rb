@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  before_filter :require_login
+
+  def home
+    @user = User.find(current_user.id)
+  end
+
   def index
     @page = params[:page] || 1
     @users = User.order("name").page(@page).per(5)
@@ -36,5 +42,17 @@ class UsersController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+  def require_login
+    unless logged_in?
+      flash[:error] = "You must be logged in to access this section"
+      redirect_to root_url
+    end
+  end
+
+  def logged_in?
+    !!current_user
   end
 end

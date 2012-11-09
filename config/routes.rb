@@ -1,6 +1,11 @@
 SangamApp::Application.routes.draw do
+  root to: "sessions#new"
+  get "logout" => "sessions#destroy", as: :logout
+  get "login" => "sessions#new", as: :login
+  get "home" => "users#home"
 
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
