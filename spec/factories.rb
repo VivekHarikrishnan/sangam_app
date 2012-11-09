@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 FactoryGirl.define do
   factory :user, class: User do
     name "Vivek"
