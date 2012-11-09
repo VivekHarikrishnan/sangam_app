@@ -44,7 +44,7 @@ gem 'kaminari'
 # To use debugger
 # gem 'debugger'
 
-group :test, :production do
+group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
